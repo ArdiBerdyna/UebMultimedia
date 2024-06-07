@@ -1,0 +1,71 @@
+.testimonal .items {
+  padding: 30px;
+  transition: all 0.5s ease-in-out;
+  transform: translateZ(0); /* GPU acceleration for smoother animations */
+  will-change: transform, background-color;
+}
+
+.testimonal .img {
+  position: relative;
+  overflow: hidden; /* Better handling of images and icons */
+  transition: transform 0.5s ease;
+}
+
+.testimonal img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transition: transform 0.5s, box-shadow 0.5s ease;
+}
+
+.testimonal i {
+  position: absolute;
+  bottom: 0;
+  left: 60px;
+  background-color: #1eb2a6;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+
+.testimonal .name {
+  margin-left: 25px;
+}
+
+.testimonal .name h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.testimonal .name span {
+  color: #1eb2a6;
+}
+
+.testimonal p {
+  margin-top: 20px;
+  color: grey;
+}
+
+.testimonal .items:hover {
+  background-color: #1eb2a6;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.testimonal .items:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.testimonal .items:hover i {
+  background-color: #fff;
+  color: #1eb2a6;
+  transform: rotate(360deg);
+}
+
+.testimonal .items:hover span,
+.testimonal .items:hover p {
+  color: #fff;
+}
