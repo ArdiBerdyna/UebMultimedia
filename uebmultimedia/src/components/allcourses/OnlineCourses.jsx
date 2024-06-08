@@ -34,3 +34,20 @@ const CourseBox = ({ val, index }) => {
 </div>
   );
 }
+
+const OnlineCourses = () => {
+    return (
+      <section className='online'>
+        <div className='container'>
+          <div className='content grid3'>
+            {online.map((val, index) => (
+              <CourseBox key={index} val={val} index={index} />
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+  
+  export default OnlineCourses;
+  
