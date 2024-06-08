@@ -53,6 +53,17 @@ const CoursesCard = () => {
           ))}
         </div>
       </section>
+      <video 
+  src="./images/second.mp4"
+  controls
+  style={{
+    width: '850px',      // Adjust width as needed
+    height: '500px',    // Specify height
+    margin: '20px 700px' // Centering the video with margin
+  }}
+>
+  Your browser does not support the video tag.
+</video>
 
     </>
   )
