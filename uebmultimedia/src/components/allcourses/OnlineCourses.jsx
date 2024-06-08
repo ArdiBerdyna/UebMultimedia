@@ -14,6 +14,14 @@ const CourseBox = ({ val, index }) => {
     <div 
   ref={ref}
   className='box'
+  style={{ 
+    opacity: 0, // Start as invisible
+    animation: inView ? `fadeInUp 0.5s ease-out forwards ${index * 0.2 + 0.5}s` : "none",
+    display: 'flex', // Using Flexbox
+    flexDirection: 'column', // Stack children vertically
+    justifyContent: 'space-between', // Space between items
+    height: '100%' // Ensure the box takes full container height
+  }}
 >
   <div className='img'>
     <img src={val.cover} alt='' />
