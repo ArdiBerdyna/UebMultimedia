@@ -39,6 +39,7 @@ const OnlineCourses = () => {
     return (
       <section className='online'>
         <div className='container'>
+          <Heading subtitle='COURSES' title='Browse Our Online Courses' />
           <div className='content grid3'>
             {online.map((val, index) => (
               <CourseBox key={index} val={val} index={index} />
