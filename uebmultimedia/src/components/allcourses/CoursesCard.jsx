@@ -19,11 +19,11 @@ const CoursesCard = () => {
                 <div className='text'>
                   <h1>{val.coursesName}</h1>
                   <div className='rate'>
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                    <i></i>
+                    <i className='fa fa-star'></i>
+                    <i className='fa fa-star'></i>
+                    <i className='fa fa-star'></i>
+                    <i className='fa fa-star'></i>
+                    <i className='fa fa-star'></i>
                     <label htmlFor=''>(5.0)</label>
                   </div>
                   <div className='details'>
