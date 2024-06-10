@@ -84,7 +84,33 @@ const SequentialFigures = () => {
                     height={100}
                 />
             )}
-            
+            {showforth && (
+                <Sprite
+                    image={image4} // Path to your second image
+                    x={200} // Adjusted so it appears next to the first
+                    y={410}
+                    width={100}
+                    height={100}
+                />
+            )}
+            {showFifth && (
+                <Sprite
+                    image={image5} // Path to your second image
+                    x={420} // Adjusted so it appears next to the first
+                    y={150}
+                    width={100}
+                    height={100}
+                />
+            )}
+            {showSixth && (
+                <Sprite
+                    image={image6} // Path to your second image
+                    x={420} // Adjusted so it appears next to the first
+                    y={340}
+                    width={100}
+                    height={100}
+                />
+            )}
           
         </Container>
     );
