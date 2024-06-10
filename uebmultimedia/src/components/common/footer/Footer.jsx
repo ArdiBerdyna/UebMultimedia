@@ -93,6 +93,11 @@ const Footer = () => {
           Copyright ©2022 All rights reserved <i className='fa fa-heart'></i> 
         </p>
       </div>
+      <div className="marquee">
+            <p>Education is the passport to the future, for tomorrow belongs to those who 
+              prepare for it today.” “Your attitude, not your aptitude, will determine your altitude.” 
+              “If you think education is expensive, try ignorance.” “The only person who is educated is the one who has learned</p>
+        </div>
     </>
   )
 }
