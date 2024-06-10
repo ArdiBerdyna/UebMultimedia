@@ -41,3 +41,58 @@
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
+/* Hover State for Overlay */
+.team .items:hover .overlay {
+  opacity: 1;
+  transform: translateY(0); /* Smooth transition into view */
+}
+
+/* Styles for Icons in Overlay */
+.overlay i {
+  background-color: #000;
+  color: #fff;
+  margin: 5px;
+  transition: background-color 0.5s, color 0.5s, transform 0.5s;
+}
+
+.team .items:hover .overlay i:hover {
+  background-color: #1eb2a6;
+  color: #fff;
+  transform: rotate(360deg); /* Engaging rotate effect on hover */
+}
+
+/* Styles for Details Section within Team Items */
+.team .details {
+  padding: 30px;
+  text-align: center;
+  transition: color 0.5s;
+}
+
+.team .details h2, .team .details p {
+  font-size: 20px; /* Unified font size for h2 */
+  margin-top: 10px;
+  transition: color 0.5s ease;
+}
+
+.team .items:hover .details h2,
+.team .items:hover .details p {
+  color: #fff; /* Text color change on hover */
+}
+
+/* Ensure the paragraph text is smaller and grey when not hovered */
+.team .details p {
+  font-size: 15px;
+  color: grey;
+}
+
+/* Hover State Changes for Paragraphs */
+.team .items:hover p {
+  color: #fff;
+}
+
+.stage-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ margin-bottom: 20px;
+}
