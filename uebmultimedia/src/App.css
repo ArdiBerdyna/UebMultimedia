@@ -33,7 +33,7 @@ body {
   color: #fff;
 }
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 li {
   list-style-type: none;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link  } from "react-router-dom";
 import Head from "./Head";
 import "./header.css";
 import { decodeToken } from "../../User/jwtUtils";
@@ -33,21 +33,22 @@ const Header = () => {
       <header>
         <nav className='flexSB'>
           <ul className={click ? "mobile-nav" : "flexSB "} onClick={() => setClick(false)}>
-            <li onClick={() => handleNavigation('/')}>Home</li>
-            <li onClick={() => handleNavigation('/courses')}>All Courses</li>
-            <li onClick={() => handleNavigation('/about')}>About</li>
-            <li onClick={() => handleNavigation('/team')}>Team</li>
-            <li onClick={() => handleNavigation('/pricing')}>Pricing</li>
-            <li onClick={() => handleNavigation('/journal')}>Journal</li>
-            <li onClick={() => handleNavigation('/contact')}>Contact</li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/courses">All Courses</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/team">Team</Link></li>
+            <li><Link to="/pricing">Pricing</Link></li>
+            <li><Link to="/journal">Journal</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+            
             {localStorage.getItem('token') ? (
           
-          <li onClick={handleLogout} style={{ border: "none"}} >Logout</li>
+          <li onClick={handleLogout} style={{ border: "none", color: 'white'}}  >Logout</li>
         
       ) : (
-        <li onClick={() => handleNavigation('/login')}>Login</li>
+        <li><Link to="/login">Login</Link></li>
       )}
-       {isAdmin && <li onClick={() => handleNavigation('/admin')}>
+       {isAdmin && <li onClick={() => handleNavigation('/admin')} style={{color: 'white'}}>
                     Dashboard
                   </li>} 
           </ul>
