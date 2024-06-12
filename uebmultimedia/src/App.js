@@ -21,9 +21,9 @@ function App() {
     <>
       <Router>
       {location.pathname.startsWith('/admin') ? (
-        <Switch>
+        
           <Route exact path='/admin' component={Admin} />
-        </Switch>
+       
       ) : (
         <Layout />
       )}

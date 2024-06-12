@@ -21,8 +21,8 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
                 </a>
             </li>
             <li className='sidebar-list-item'>
-                <a href="">
-                    <BsFillArchiveFill className='icon'/> Products
+                <a href="/">
+                    <BsFillArchiveFill className='icon'/> Home
                 </a>
             </li>
             <li className='sidebar-list-item'>

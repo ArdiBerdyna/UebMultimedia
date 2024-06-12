@@ -67,15 +67,15 @@ const Contact = () => {
             <div className='items grid2'>
               <div className='box'>
                 <h4>ADDRESS:</h4>
-                <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+                <p>Peje, Kosova</p>
               </div>
               <div className='box'>
                 <h4>EMAIL:</h4>
-                <p> info@yoursite.com</p>
+                <p> info@hotmail.com</p>
               </div>
               <div className='box'>
                 <h4>PHONE:</h4>
-                <p> + 1235 2355 98</p>
+                <p>+38349562001</p>
               </div>
             </div>
 
@@ -88,11 +88,11 @@ const Contact = () => {
                 setEamil(event.target.value);
               }}  />
               </div>
-              <input type='text' placeholder='Subject' />
+              
               <textarea cols='30' rows='10'  onChange={(event) => {
                 setMessage(event.target.value);
-              }} >
-                Create a message here...
+              }}  placeholder=' Create a message here...'>
+               
               </textarea>
               <button className='primary-btn'>SEND MESSAGE</button>
             </form>

@@ -33,9 +33,11 @@ function LoginForm() {
       if (response) {
         setMessage('Login successful');
         if (role === 'admin') {
-          history.push("/adminres")
+          history.push("/admin")
+          window.location.reload()
         } else if (role === 'client') {
           history.push('/');
+          window.location.reload()
         }
 
 
