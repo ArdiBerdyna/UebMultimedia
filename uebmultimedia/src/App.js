@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+import Header from "./components/common/header/Header"
+import { BrowserRouter as Router, Switch, Route, useLocation } from "react-router-dom"
+import About from "./components/about/About"
+import CourseHome from "./components/allcourses/CourseHome"
+import Team from "./components/team/Team"
+import Pricing from "./components/pricing/Pricing"
+import Blog from "./components/blog/Blog"
+import Contact from "./components/contact/Contact"
+import Footer from "./components/common/footer/Footer"
+import Home from "./components/home/Home"
+import LoginForm from "./components/User/LoginForm"
+import Registration from "./components/User/Registration"
+import Admin from "./Admin/Admin"
+import Layout from './Layout'
 
 function App() {
+  const location = useLocation(); // This hook gives us access to the location object
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Router>
+      {location.pathname.startsWith('/admin') ? (
+        <Switch>
+          <Route exact path='/admin' component={Admin} />
+        </Switch>
+      ) : (
+        <Layout />
+      )}
+
+      </Router>
+    </>
+  )
 }
 
-export default App;
+export default App
