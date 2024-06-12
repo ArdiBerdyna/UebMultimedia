@@ -15,22 +15,27 @@ import Admin from "./Admin/Admin"
 import Layout from './Layout'
 
 function App() {
-  const location = useLocation(); // This hook gives us access to the location object
-
-  return (
-    <>
-      <Router>
-      {location.pathname.startsWith('/admin') ? (
+  const location = useLocation(); 
+// This hook gives us access to the location object
+if (location.pathname.startsWith('/admin')) {
+  return <Route exact path='/admin' component={Admin} />;
+} else {
+  return <Layout />;
+}
+  // return (
+  //   <>
+  //     <Router>
+  //     {location.pathname.startsWith('/admin') ? (
         
-          <Route exact path='/admin' component={Admin} />
+  //         <Route exact path='/admin' component={Admin} />
        
-      ) : (
-        <Layout />
-      )}
+  //     ) : (
+  //       <Layout />
+  //     )}
 
-      </Router>
-    </>
-  )
+  //     </Router>
+  //   </>
+  // )
 }
 
 export default App
