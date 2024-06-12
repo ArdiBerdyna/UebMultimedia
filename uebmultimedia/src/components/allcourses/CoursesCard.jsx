@@ -13,7 +13,7 @@ const CoursesCard = () => {
               <div className='content flex'>
                 <div className='left'>
                   <div className='img'>
-                    <img src={val.cover} alt='' />
+                    <img src={val.cover} alt='' loading="lazy"/>
                   </div>
                 </div>
                 <div className='text'>
@@ -31,7 +31,7 @@ const CoursesCard = () => {
                       <>
                         <div className='box'>
                           <div className='dimg'>
-                            <img src={details.dcover} alt='' />
+                            <img src={details.dcover} alt='' loading="lazy" />
                           </div>
                           <div className='para'>
                             <h4>{details.name}</h4>
@@ -55,7 +55,7 @@ const CoursesCard = () => {
       </section>
       <video 
   src="./images/second.mp4"
-  controls
+  controls preload="metadata"
   style={{
     width: '850px',      // Adjust width as needed
     height: '500px',    // Specify height

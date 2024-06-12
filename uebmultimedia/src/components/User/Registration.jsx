@@ -5,7 +5,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { FormGroup, Button, Container, Col, Row } from 'reactstrap';
 import "./Login.css";
 
-const drive = "./images/img1.jpg";
+
 
 
 

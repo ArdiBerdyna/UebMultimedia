@@ -7,7 +7,7 @@ const BlogCard = () => {
       {blog.map((val) => (
         <div className='items shadow'>
           <div className='img'>
-          <video src={val.cover} width={600} height={400} controls />
+          <video src={val.cover} width={600} height={400} controls preload="metadata" />
           </div>
           <div className='text'>
             <div className='admin flexSB'>

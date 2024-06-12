@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Head from "./Head";
 import "./header.css";
+import { decodeToken } from "../../User/jwtUtils";
 
 const Header = () => {
   const [click, setClick] = useState(false);
@@ -12,6 +13,20 @@ const Header = () => {
     window.location.reload(); // Force a reload of the page
   };
 
+  const token = localStorage.getItem('token');
+  const decodedToken = decodeToken(token);
+ let isAdmin;
+ if(token){
+  isAdmin = decodedToken.role === 'admin';
+ }
+
+ const handleLogout = () => {
+  
+  localStorage.removeItem('token');
+  history.push('/');
+  window.location.reload()
+};
+  
   return (
     <>
       <Head />
@@ -25,6 +40,16 @@ const Header = () => {
             <li onClick={() => handleNavigation('/pricing')}>Pricing</li>
             <li onClick={() => handleNavigation('/journal')}>Journal</li>
             <li onClick={() => handleNavigation('/contact')}>Contact</li>
+            {localStorage.getItem('token') ? (
+          
+          <li onClick={handleLogout} style={{ border: "none"}} >Logout</li>
+        
+      ) : (
+        <li onClick={() => handleNavigation('/login')}>Login</li>
+      )}
+       {isAdmin && <li onClick={() => handleNavigation('/admin')}>
+                    Dashboard
+                  </li>} 
           </ul>
           <div className='start'>
             <div className='button'>GET CERTIFICATE</div>

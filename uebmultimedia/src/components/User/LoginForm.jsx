@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Switch, Routes } from 'react-router-dom
 import { decodeToken } from './jwtUtils';
 import { FormGroup, Button, Container, Col, Row } from 'reactstrap';
 import Back from '../common/back/Back';
-const drive = "./images/img1.jpg"
+
 
 
 
